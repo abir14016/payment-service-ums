@@ -11,7 +11,7 @@ model Payment {
   id                 String        @id @default(uuid())
   amount             Int
   studentId          String
-  status             PaymentStatus @default(PANDING)
+  status             PaymentStatus @default(PENDING)
   transactionId      String
   paymentGatewayData Json?
 
@@ -22,6 +22,6 @@ model Payment {
 }
 
 enum PaymentStatus {
-  PANDING
+  PENDING
   PAID
 }
